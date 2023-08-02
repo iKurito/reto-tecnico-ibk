@@ -1,0 +1,36 @@
+# Files and directories to ignore when copying files into the Docker image
+
+# node_modules: Exclude the entire node_modules directory to avoid copying all dependencies
+node_modules
+
+# Yarn lock file: Yarn's lock file is not needed in production
+yarn.lock
+
+# ESLint cache and debug logs
+.eslintcache
+.eslintignore
+.eslintoutput
+.eslinttrc.js
+
+# Prettier cache and configuration
+.prettierrc.js
+
+# Editor and IDE specific files
+.vscode/
+.idea/
+
+# Git specific files
+.git/
+.gitignore
+
+# Development files
+Dockerfile
+.dockerignore
+README.md
+
+# Other files and directories you may want to exclude
+*.log
+*.txt
+*.md
+*.yml
+*.yaml
