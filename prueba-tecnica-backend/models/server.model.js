@@ -1,7 +1,11 @@
 const express = require("express");
 const cors = require("cors");
 
-const { dbConnection, dbDisconnection, getUri } = require("../database/config");
+const {
+  dbConnection,
+  dbDisconnection,
+  getUri,
+} = require("../database/config.database");
 
 class Server {
   constructor() {
@@ -31,7 +35,7 @@ class Server {
   }
 
   routes() {
-    this.app.use(this.paths.users, require("../routes/users"));
+    this.app.use(this.paths.users, require("../routes/users.route"));
   }
 
   listen() {
