@@ -1,5 +1,5 @@
-const Server = require("./server");
-const User = require("./user");
+const Server = require("./server.model");
+const User = require("./user.model");
 
 module.exports = {
   Server,
