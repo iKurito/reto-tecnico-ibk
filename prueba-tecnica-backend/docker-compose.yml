@@ -2,8 +2,8 @@ version: "3.8"
 
 services:
   db:
-    image: mongodb
+    image: mongo
     container_name: mongodb
     restart: unless-stopped
-    ports: 
+    ports:
       - "27017:27017"

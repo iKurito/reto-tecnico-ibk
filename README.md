@@ -53,7 +53,7 @@ cd reto-tecnico-ibk
 - Desplegar la base de datos MongoDB en un contenedor Docker:
 
   ```bash
-  docker-compose up -d
+  docker compose up -d
   ```
 
 - Para ejecutar el servidor:
