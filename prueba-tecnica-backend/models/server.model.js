@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const swaggerUi = require("swagger-ui-express");
 
 const {
   dbConnection,
@@ -7,12 +8,15 @@ const {
   getUri,
 } = require("../database/config.database");
 
+const openApiDocumentation = require("../docs/openApiDocumentation");
+
 class Server {
   constructor() {
     this.app = express();
     this.port = process.env.PORT;
     this.paths = {
       users: "/api/v1/users",
+      docs: "/api/v1/docs",
     };
     this.connectToDB();
     this.middlewares();
@@ -36,6 +40,11 @@ class Server {
 
   routes() {
     this.app.use(this.paths.users, require("../routes/users.route"));
+    this.app.use(
+      this.paths.docs,
+      swaggerUi.serve,
+      swaggerUi.setup(openApiDocumentation),
+    );
   }
 
   listen() {

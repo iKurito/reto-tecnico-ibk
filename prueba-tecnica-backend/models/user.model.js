@@ -28,10 +28,6 @@ const UserSchema = Schema({
   phone: {
     type: String,
   },
-  status: {
-    type: Boolean,
-    default: true,
-  },
 });
 
 UserSchema.methods.toJSON = function () {

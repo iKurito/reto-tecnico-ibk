@@ -10,9 +10,8 @@ const getUsers = async (req = request, res = response) => {
       User.countDocuments(query),
       User.find(query).skip(Number(from)).limit(Number(limit)),
     ]);
-    return res.json({ total, users });
+    return res.status(200).json({ total, users });
   } catch (error) {
-    console.log(error);
     return res.status(500).json({ message: "Error al obtener usuarios" });
   }
 };
@@ -21,9 +20,8 @@ const getUserById = async (req = request, res = response) => {
   try {
     const { id } = req.params;
     const user = await User.findById(id);
-    return res.json(user);
+    return res.status(200).json(user);
   } catch (error) {
-    console.log(error);
     return res.status(500).json({ message: "Error al obtener usuario" });
   }
 };
@@ -42,9 +40,8 @@ const createUser = async (req = request, res = response) => {
       phone,
     });
     await user.save();
-    return res.json(user);
+    return res.status(201).json(user);
   } catch (error) {
-    console.log(error);
     return res.status(500).json({ message: "Error al crear usuario" });
   }
 };
@@ -64,9 +61,8 @@ const updateUser = async (req = request, res = response) => {
       phone,
     });
     const user = await User.findById(id);
-    return res.json(user);
+    return res.status(200).json(user);
   } catch (error) {
-    console.log(error);
     return res.status(500).json({ message: "Error al actualizar usuario" });
   }
 };
@@ -75,9 +71,8 @@ const removeUser = async (req = request, res = response) => {
   try {
     const { id } = req.params;
     await User.findByIdAndRemove(id);
-    return res.json({ message: "Usuario removido" });
+    return res.sendStatus(204);
   } catch (error) {
-    console.log(error);
     return res.status(500).json({ message: "Error al remover usuario" });
   }
 };
