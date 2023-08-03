@@ -7,6 +7,7 @@ import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { ListPageComponent } from './pages/list-page/list-page.component';
 import { NewUserPageComponent } from './pages/new-user-page/new-user-page.component';
 import { UserPageComponent } from './pages/user-page/user-page.component';
+import { ComponentLibraryModule } from 'component-library';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { UserPageComponent } from './pages/user-page/user-page.component';
     UserPageComponent
   ],
   imports: [
+    ComponentLibraryModule,
     CommonModule,
     UsersRoutingModule
   ]
