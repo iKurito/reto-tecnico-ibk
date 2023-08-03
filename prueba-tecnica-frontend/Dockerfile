@@ -1,6 +1,14 @@
 # Stage 1: Build the Angular app
 FROM node:16 as build-stage
 
+ARG API_URL
+
+ENV API_URL=$API_URL
+
+ARG SHOW_COMMITS
+
+ENV SHOW_COMMITS=$SHOW_COMMITS
+
 WORKDIR /app
 
 COPY package.json ./

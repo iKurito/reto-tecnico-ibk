@@ -9,6 +9,7 @@ import { NewUserPageComponent } from './pages/new-user-page/new-user-page.compon
 import { UserPageComponent } from './pages/user-page/user-page.component';
 import { ComponentLibraryModule } from 'component-library';
 import { RecordsPageComponent } from './pages/records-page/records-page.component';
+import { CommitsPageComponent } from './pages/commits-page/commits-page.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { RecordsPageComponent } from './pages/records-page/records-page.componen
     ListPageComponent,
     NewUserPageComponent,
     UserPageComponent,
-    RecordsPageComponent
+    RecordsPageComponent,
+    CommitsPageComponent
   ],
   imports: [
     ComponentLibraryModule,

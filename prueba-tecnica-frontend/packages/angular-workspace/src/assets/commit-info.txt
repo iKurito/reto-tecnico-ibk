@@ -1,0 +1,305 @@
+commit c8253d19f8946b99ff88b8c61772958b67667b39
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 04:04:14 2023 -0500
+
+    fix: update status code from services
+
+commit 4f8a69e211050ba352447fe91d7c8d0e349843d7
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 04:00:28 2023 -0500
+
+    fix: remove query to retrieve all users
+
+commit 9a2df8a8e047a45e361f39add870d8b8166e9935
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 03:56:00 2023 -0500
+
+    ci: implement commitlint and husky to avoid pointless commits
+
+commit 74600139564e14dfd043028d05e97cb9395514f0
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 03:52:00 2023 -0500
+
+    build: uninstall deprecated libraries
+
+commit 1c0353b9245baf9b7ef8c4fddcbc665ebdae51e7
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 03:44:30 2023 -0500
+
+    docs: adding tags in api documentation
+
+commit 9c3328b00ac668b930f253be70a765607aca8a8a
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 03:33:33 2023 -0500
+
+    feat: update users controller and add swagger route
+
+commit 83e1b34de68c828ed58bc9cd4a50e139b52cab02
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 03:22:34 2023 -0500
+
+    build: add swagger
+
+commit af313efe6fcfea058483dae187804d2b4b0cf32a
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 01:39:40 2023 -0500
+
+    fix: uninstall deprecated libraries
+
+commit 8a6a9f061969fdb960691d1b300918b65c20031a
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 01:37:05 2023 -0500
+
+    feat: generate unique id for record
+
+commit 17bbd4710814698f7442f1eb71aeac2fb70c9012
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 01:25:12 2023 -0500
+
+    feat: add stories
+
+commit 5a756da8c748c9e3b3e173ce4989a6362806bba4
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 00:30:43 2023 -0500
+
+    style: update button style of user card
+
+commit 9c8b01c36c0f899cd00092f64054b570256a30b4
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 00:25:04 2023 -0500
+
+    feat: manage data state with localStorage
+
+commit 958dbf7f4a71d2201af85cd384a063c9df21d4b1
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 23:45:38 2023 -0500
+
+    style: update button style of record download
+
+commit 301de845a6d73b1f3d7bd83c1b50c5aa1789b3cd
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 23:44:55 2023 -0500
+
+    feat: add list of records
+
+commit 5797c37d489c3c770e5e6a68e590fede56650ce7
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 23:34:05 2023 -0500
+
+    feat: add record web component
+
+commit 9a41dd2e1616081f1dd6c4e5d59a88b45ce27c77
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 23:04:25 2023 -0500
+
+    feat: update header layout
+
+commit 0851ea7fa3eb412df1089e8536e17f2ac89eb29a
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 22:52:17 2023 -0500
+
+    feat: generate an image of record
+
+commit dcfd16a4bafda6c2d7b76ce76d0ca6c5719553f4
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 20:55:07 2023 -0500
+
+    style: update global styles
+
+commit 0b19dd97d1f2ed692421e8c0f0d0eaf29d2294f6
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 20:38:47 2023 -0500
+
+    feat: add user page
+
+commit 0d936996f498b738f4c9c310d7a01108fa929362
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 20:38:24 2023 -0500
+
+    feat: add new-user page
+
+commit 18c29073cc39f1a8040524006c91b6d792435019
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 20:37:58 2023 -0500
+
+    feat: add edit-user page
+
+commit 3b4305f941b7e6dc663c32deb40d7fb0f9deba4a
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 20:37:25 2023 -0500
+
+    feat: add list page
+
+commit e24e6e7df769166cfee59b114cd82c7c2555b4bc
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 20:36:40 2023 -0500
+
+    feat: add layout
+
+commit 6fc76cf9ef33681fd32dfcde1335455cd0c69dc8
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 20:32:40 2023 -0500
+
+    feat: add users routing
+
+commit 050eeff9851753481db0ea34d10637cdc7de7f65
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 20:31:56 2023 -0500
+
+    feat: add main routing
+
+commit 8d965c4af6062de5f6e3f1d0e7f21d8fedf04741
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 20:30:17 2023 -0500
+
+    feat: add error 404 page
+
+commit da70cead488365dbfc1de032b3a5b3ff3c45b557
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 20:28:12 2023 -0500
+
+    feat: add users services
+
+commit 4b756bc4f96b5dcf4cb208bac564a712e088aaf7
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 20:26:38 2023 -0500
+
+    feat: add user interface
+
+commit 4a59a42e91910f076c8ec2167ad0b5f592587ca4
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 20:25:59 2023 -0500
+
+    feat: add user pages
+
+commit 222d48b7014790ada9423213843de93d807b9f31
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 20:23:14 2023 -0500
+
+    feat: create and generate angular components with stencilJS
+
+commit d42df711eaa6b253f747b618ad979f6df151f633
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 20:19:46 2023 -0500
+
+    build: add sass
+
+commit 2063155e78ca7d6f7d9bd05e066ae98c389b9f8b
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 20:15:55 2023 -0500
+
+    ci: update docker-compose.yml
+
+commit c6fc2529073bdf4e30a3991280444b58e42e5f2a
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 20:10:31 2023 -0500
+
+    ci: add docker compose and dockerize frontend
+
+commit edace82545f7b65d4a3b2858faa88401455c4f87
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 20:01:11 2023 -0500
+
+    build: configure storybook
+
+commit 8f12a046b3fb9779f5fed162d8b746da7d158276
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 19:45:32 2023 -0500
+
+    build: configure stencilJs like angular components
+
+commit 48a75fb47a3c59f2b90866b5e3d7a78549c33922
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 19:33:07 2023 -0500
+
+    build: add new angular app and stencil
+
+commit 38a7dfba1de234110f05da0a40d160c1cbd9247f
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 17:14:42 2023 -0500
+
+    ci: add docker compose and dockerize backend
+
+commit e452b76d8b95898117365b025c8e908726e8cae7
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 06:06:04 2023 -0500
+
+    build: add gitignore
+
+commit 527aafb23053d413bd8be45916712db2b804c089
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 06:04:41 2023 -0500
+
+    ci: add docket compose to dockerize mongoose
+
+commit 085b0e939386842706e732dcdf2ec2d3a30abf4c
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 06:03:30 2023 -0500
+
+    test: add users route tests
+
+commit 0189b74456cfca7fc20c0c9255b50c9022d0a6eb
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 06:00:59 2023 -0500
+
+    feat: update paths relatives
+
+commit 9849f69f37521ec9c399c7dad13384ecea5b5a04
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 05:52:49 2023 -0500
+
+    feat: add users route
+
+commit 9f6970096c05d1bca703fff2d2993b5574bc6b65
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 05:51:26 2023 -0500
+
+    feat: add middleware for validations
+
+commit f255337d08207eb9487c3e445420d0088f3332f3
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 05:49:43 2023 -0500
+
+    feat: update models
+
+commit fd37176d31c1046e55a92d0149a5f91c08c781a3
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 05:49:10 2023 -0500
+
+    feat: update users controller
+
+commit 4fc49f56377bfae645201e23c7c8653ca3fd3222
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 05:48:07 2023 -0500
+
+    feat: add users helper
+
+commit b6d7a804b7a4668342b8313c334313b3dad1f207
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 05:46:52 2023 -0500
+
+    feat: add config of mongoose database
+
+commit 3b57962508d140fe1379b1b099ea3a3e4e93cf8a
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 05:46:03 2023 -0500
+
+    feat: add user controller
+
+commit ead9b940bdfc0d671f6125bd6859a7ae84cac16f
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 05:44:54 2023 -0500
+
+    feat: add models and app.js
+
+commit 1c31bab830cb1321c7ecba9c0bdb6ce0f40d1a67
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 05:37:43 2023 -0500
+
+    feat: add project backend
+
+commit f715cc59aea57e6a1470a51d9526bbfde6f3dc4b
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Wed Aug 2 05:30:00 2023 -0500
+
+    feat: first commit

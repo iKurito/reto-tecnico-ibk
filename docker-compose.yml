@@ -11,6 +11,9 @@ services:
     build:
       context: ./prueba-tecnica-frontend
       dockerfile: Dockerfile
+      args:
+        - API_URL=http://localhost:8080
+        - SHOW_COMMITS=false
     image: rtunque/prueba-tecnica:frontend-1.0.0
     container_name: web
     restart: unless-stopped

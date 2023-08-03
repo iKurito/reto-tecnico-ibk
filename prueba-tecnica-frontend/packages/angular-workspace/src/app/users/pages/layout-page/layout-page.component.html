@@ -6,6 +6,7 @@
     <ul>
       <li [routerLink]="['/users/list']">Inicio</li>
       <li [routerLink]="['/users/records']">Constancias</li>
+      <li *ngIf="showCommits" [routerLink]="['/users/commits']">Commits</li>
     </ul>
   </div>
 </rt-header>
