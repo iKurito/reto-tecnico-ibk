@@ -116,31 +116,25 @@ El cliente del Microfrontend utiliza iFrame para visualizar el User Management S
 
 1. Acceder a `/microfrontend-cliente` y ejecutar los siguientes comandos:
 
-Para instalar las dependencias:
+- Para instalar las dependencias:
 
-```bash
-yarn
-```
+  ```bash
+  yarn
+  ```
 
-Para ejecutar el cliente en modo desarrollo:
+- Para ejecutar el cliente en modo desarrollo:
 
-```bash
-yarn dev
-```
+  ```bash
+  yarn dev
+  ```
 
-La aplicación estará disponible en `http://localhost:5173`.
+  La aplicación estará disponible en `http://localhost:5173`.
 
-2. Ejecutando el cliente en un contenedor Docker:
-
-```bash
-docker run -d -p 80:80 awesome-user-management-sandbox
-```
-
-3. Accediendo al Sandbox en línea: `https://codesandbox.io/s/strange-poitras-x42w3k?file=/index.html` o `https://x42w3k.csb.app/`.
+2. Accediendo al Sandbox en línea: `https://codesandbox.io/s/strange-poitras-x42w3k?file=/index.html` o `https://x42w3k.csb.app/`.
 
 ## Contribución
 
-¡Agradecemos las contribuciones! Si deseas contribuir a Awesome User Management System, sigue los pasos descritos en `CONTRIBUTING.md`.
+¡Agradecemos las contribuciones! Si deseas contribuir a Awesome User Management System, sigue los pasos descritos en <a href="https://github.com/iKurito/reto-tecnico-ibk/blob/main/CONTRIBUTING.md" target="_blank">`CONTRIBUTING.md`</a>.
 
 ## Licencia
 
@@ -148,7 +142,7 @@ Este proyecto se distribuye bajo la licencia MIT. Consulta el archivo <a href="h
 
 ## Contacto y Soporte
 
-Si tienes alguna pregunta o necesitas soporte técnico, puedes contactarnos en `ronaldo.tunque@pucp.edu.pe`.
+Si tienes alguna pregunta o necesitas soporte técnico, puedes contactarnos en <a href="mailto:ronaldo.tunque@pucp.edu.pe">`ronaldo.tunque@pucp.edu.pe`</a>.
 
 ¡Esperamos que disfrutes usando User Management System!
 
