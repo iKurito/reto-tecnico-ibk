@@ -89,6 +89,7 @@ yarn test
 ## Despliegue en Contenedor Docker
 
 Para desplegar la aplicación en un contenedor Docker con Nginx, sigue estos pasos:
+
 1. Dirigete a la raíz y ejecuta el siguiente comando para construir las imágenes Docker para la base de datos, el backend y el frontend utilizando docker compose:
 
 ```bash
@@ -111,19 +112,23 @@ docker compose down
 
 ## Cliente del Microfrontend (Sandbox)
 
-El cliente del Microfrontend utiliza iFrame para visualizarlo. Puedes acceder al Sandbox de 3 formas:
+El cliente del Microfrontend utiliza iFrame para visualizar el User Management System. Puedes acceder al Sandbox de 3 formas:
 
 1. Acceder a `/microfrontend-cliente` y ejecutar los siguientes comandos:
 
 Para instalar las dependencias:
+
 ```bash
 yarn
 ```
 
 Para ejecutar el cliente en modo desarrollo:
+
 ```bash
 yarn dev
 ```
+
+La aplicación estará disponible en `http://localhost:5173`.
 
 2. Ejecutando el cliente en un contenedor Docker:
 
