@@ -8,6 +8,7 @@ import { ListPageComponent } from './pages/list-page/list-page.component';
 import { NewUserPageComponent } from './pages/new-user-page/new-user-page.component';
 import { UserPageComponent } from './pages/user-page/user-page.component';
 import { ComponentLibraryModule } from 'component-library';
+import { RecordsPageComponent } from './pages/records-page/records-page.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ComponentLibraryModule } from 'component-library';
     LayoutPageComponent,
     ListPageComponent,
     NewUserPageComponent,
-    UserPageComponent
+    UserPageComponent,
+    RecordsPageComponent
   ],
   imports: [
     ComponentLibraryModule,

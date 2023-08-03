@@ -5,12 +5,14 @@ import { NewUserPageComponent } from './pages/new-user-page/new-user-page.compon
 import { ListPageComponent } from './pages/list-page/list-page.component';
 import { UserPageComponent } from './pages/user-page/user-page.component';
 import { EditUserPageComponent } from './pages/edit-user-page/edit-user-page.component';
+import { RecordsPageComponent } from './pages/records-page/records-page.component';
 
 const routes: Routes = [
   {
     path: '',
     component: LayoutPageComponent,
     children: [
+      { path: 'records', component: RecordsPageComponent },
       { path: 'new-user', component: NewUserPageComponent },
       { path: 'edit/:id', component: EditUserPageComponent },
       { path: 'list', component: ListPageComponent },

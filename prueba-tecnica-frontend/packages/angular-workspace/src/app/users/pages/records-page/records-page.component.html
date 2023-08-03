@@ -1,0 +1,16 @@
+{{records | json}}
+<div>
+  <h1>Constancias registradas</h1>
+  <button>Descargar constancias</button>
+</div>
+<hr />
+<!-- Estructura de la carta -->
+<div id="test" *ngFor="let record of records.data" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));">
+  <div id="{{'card-' + record.id}}">
+    <rt-card uid={{record.id}} email={{record.user.email}}></rt-card>
+    <button style="width: 100%; margin-top: 10px;" (click)="crearImagen(record.id)">Descargar constancia</button>
+    <a id="{{'download-' + record.id}}" type="button" style="visibility: hidden;" href="{{img}}" download> 
+      Descargar
+    </a>
+  </div>
+</div>

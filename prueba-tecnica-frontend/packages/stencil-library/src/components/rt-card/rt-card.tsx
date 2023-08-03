@@ -1,5 +1,20 @@
 import { Component, Prop, h } from '@stencil/core';
 
+interface Records {
+  data: Record[];
+}
+
+interface Record {
+  id: string;
+  user: User;
+}
+
+interface User {
+  names: string;
+  surnames: string;
+  email: string;
+}
+
 @Component({
   tag: 'rt-card',
   styleUrl: 'rt-card.sass',
@@ -29,12 +44,19 @@ export class RtCard {
         if (res.status !== 200) {
           throw new Error('Error');
         }
+        this.updateRecords();
         window.location.reload();
         return res.json();
       })
       .catch(err => {
         console.log(err);
       });
+  }
+
+  updateRecords() {
+    const records: Records = JSON.parse(localStorage.getItem('records')) ?? { data: [] };
+    records.data.push({ id: this.uid, user: { names: this.names, surnames: this.surnames, email: this.email } });
+    localStorage.setItem('records', JSON.stringify(records));
   }
 
   render() {
