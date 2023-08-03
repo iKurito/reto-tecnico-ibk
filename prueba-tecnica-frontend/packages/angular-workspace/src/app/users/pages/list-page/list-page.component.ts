@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-page.component.sass']
 })
 export class ListPageComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {
