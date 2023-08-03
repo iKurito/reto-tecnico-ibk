@@ -6,6 +6,12 @@
     "paths": {
       "component-library": [
         "dist/component-library"
+      ],
+      "rxjs": [
+        "node_modules/rxjs"
+      ],
+      "rxjs/*": [
+        "node_modules/rxjs/*"
       ]
     },
     "outDir": "./dist/out-tsc",
