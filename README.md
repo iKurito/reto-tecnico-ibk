@@ -13,25 +13,32 @@ Para instalar y ejecutar el sistema, sigue estos pasos:
 1. Clona el repositorio en tu máquina local:
 
 ```bash
-git clone https://github.com/tuusuario/awesome-user-management.git
-```
-```bash
-cd awesome-user-management
+git clone https://github.com/iKurito/reto-tecnico-ibk.git
 ```
 
-2. Instala las dependencias:
-
 ```bash
-npm install
+cd reto-tecnico-ibk
 ```
 
-3. Inicia el servidor local:
+2. Ejecutar el comando para construir las respectivas imágenes de Docker:
 
 ```bash
-npm start
+docker compose build
+```
+
+3. Ejecutar el comando para levantar los contenedores:
+
+```bash
+docker compose up -d
 ```
 
 El servidor estará disponible en `http://localhost`.
+
+Para terminar la ejecución de los contenedores, ejecutar el siguiente comando:
+
+```bash
+docker compose down
+```
 
 ## Microfrontend con Stencil y Angular
 
@@ -39,7 +46,9 @@ El frontend está desarrollado con Stencil para los componentes web y Angular (v
 
 ### Componentes Web con Stencil
 
-Los componentes web se encuentran en la carpeta `/microfrontend/src/components`. Puedes ver y probar cada componente utilizando Storybook:
+Los componentes web se encuentran en la carpeta <a href="https://github.com/iKurito/reto-tecnico-ibk/tree/main/prueba-tecnica-frontend/packages/stencil-library" target="_blank" >`/prueba-tecnica-frontend/packages/stencil-library`</a>.
+
+Puedes ver y probar cada componente utilizando Storybook:
 
 ```bash
 npm run storybook
@@ -49,7 +58,7 @@ Storybook estará disponible en `http://localhost:6006`.
 
 ### Manejo de Estados
 
-Para un manejo eficiente de estados, se utiliza la librería Redux. Todos los estados relevantes se almacenan en el store global, lo que permite una comunicación eficiente entre componentes.
+Para un manejo de estados, en esta oportunida se está utilizando el LocalStorage. Todos los estados relevantes se almacenan en el navegador, lo que permite una comunicación entre diferentes componentes en una arquitectura microfrontend.
 
 ### Estilización con SASS
 
@@ -57,42 +66,59 @@ La estilización de los componentes se realiza utilizando SASS para proporcionar
 
 ### Información del Commit y Fecha de Compilación
 
-La información del último commit y la fecha de compilación se muestran en el navegador utilizando variables de entorno. Esto permite rastrear la versión en ejecución fácilmente.
+La información de los commit realizados y la fecha de compilación se muestran en el navegador dependiendo de una variable de entorno. Esto permite rastrear la versión en ejecución fácilmente en caso se precise.
 
 ## Documentación de la API Rest
 
-La API Rest para el mantenimiento de usuarios se encuentra documentada en el archivo `openapi.json`, que sigue el estándar OpenAPI (Swagger). Puedes acceder a la documentación en `http://localhost:3000/api-docs`.
+La API Rest para el mantenimiento de usuarios se encuentra documentada en el archivo `openApiDocumentation.json.json`, ubicada en <a href="https://github.com/iKurito/reto-tecnico-ibk/tree/main/prueba-tecnica-backend/docs">`/prueba-tecnica-backend/docs`</a>, que sigue el estándar OpenAPI (Swagger).
 
-## Mocks de Datos
+Puedes acceder a la documentación en `http://localhost:8080/api/v1/docs`.
 
-Los datos se generan automáticamente con Faker.js y se utilizan mocks para simular las respuestas de la API en el entorno de desarrollo.
+## Testing
+
+Para los mocks y para las pruebas de los diferentes servicios, se utilizan las librerías Jest y Supertest. Además, para evitar la conexión directa a MongoDB, se emplea mongodb-memory-server. Para ejecutar las pruebas, utiliza el siguiente comando:
+
+```
+yarn test
+```
 
 ## Despliegue en Contenedor Docker
 
 Para desplegar la aplicación en un contenedor Docker con Nginx, sigue estos pasos:
-
-1. Construye la imagen Docker:
+1. Dirigete a la raíz y ejecuta el siguiente comando para construir las imágenes Docker para la base de datos, el backend y el frontend utilizando docker compose:
 
 ```bash
-docker build -t awesome-user-management .
+docker compose build
 ```
 
-2. Ejecuta el contenedor:
+2. Ejecutar el comando para levantar los contenedores:
 
 ```bash
-docker run -d -p 80:80 awesome-user-management
+docker compose up -d
 ```
 
 La aplicación estará disponible en `http://localhost`.
+
+Para terminar la ejecución de los contenedores, ejecutar el siguiente comando:
+
+```bash
+docker compose down
+```
 
 ## Cliente del Microfrontend (Sandbox)
 
 El cliente del Microfrontend utiliza iFrame para visualizarlo. Puedes acceder al Sandbox de 3 formas:
 
-1. Ejecutando el cliente localmente:
+1. Acceder a `/microfrontend-cliente` y ejecutar los siguientes comandos:
 
+Para instalar las dependencias:
 ```bash
-npm run start:sandbox
+yarn
+```
+
+Para ejecutar el cliente en modo desarrollo:
+```bash
+yarn dev
 ```
 
 2. Ejecutando el cliente en un contenedor Docker:
