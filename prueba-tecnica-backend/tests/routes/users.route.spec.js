@@ -3,10 +3,16 @@ const request = require("supertest");
 
 const server = new Server();
 
+/**
+ * Testea las rutas de usuario con respuestas de error (status code 400).
+ */
 describe("Test rutas de usuario con respuesta de error", () => {
   let userId = "123456789";
   let response;
 
+  /**
+   * Testea la ruta POST /api/v1/users - Crear usuario con datos incompletos.
+   */
   describe("POST /api/v1/user - Crear usuario", () => {
     test("Debe retornar 400", async () => {
       const body = {
@@ -18,6 +24,9 @@ describe("Test rutas de usuario con respuesta de error", () => {
     });
   });
 
+  /**
+   * Testea la ruta GET /api/v1/users/:id - Obtener usuario por id con id inválido.
+   */
   describe("GET /api/v1/users/:id - Obtener usuario por id", () => {
     test("Debe retornar 400", async () => {
       response = await request(server.app)
@@ -27,6 +36,9 @@ describe("Test rutas de usuario con respuesta de error", () => {
     });
   });
 
+  /**
+   * Testea la ruta PATCH /api/v1/users/:id - Actualizar usuario con id inválido.
+   */
   describe("PATCH /api/v1/users/:id - Actualizar usuario", () => {
     test("Debe retornar 400", async () => {
       const body = {
@@ -40,6 +52,9 @@ describe("Test rutas de usuario con respuesta de error", () => {
     });
   });
 
+  /**
+   * Testea la ruta DELETE /api/v1/users/:id - Eliminar usuario con id inválido.
+   */
   describe("DELETE /api/v1/users/:id - Eliminar usuario", () => {
     test("Debe retornar 400", async () => {
       response = await request(server.app)
@@ -50,10 +65,16 @@ describe("Test rutas de usuario con respuesta de error", () => {
   });
 });
 
+/**
+ * Testea las rutas de usuario con respuestas satisfactorias (status code 200, 201 y 204).
+ */
 describe("Test rutas de usuario con respuesta satisfactoria", () => {
   let userId;
   let response;
 
+  /**
+   * Testea la ruta GET /api/v1/users - Obtener usuarios (debe retornar 200).
+   */
   describe("GET /api/v1/users - Obtener usuarios", () => {
     test("Debe retornar 200", async () => {
       response = await request(server.app).get("/api/v1/users").send();
@@ -61,6 +82,9 @@ describe("Test rutas de usuario con respuesta satisfactoria", () => {
     });
   });
 
+  /**
+   * Testea la ruta POST /api/v1/users - Crear usuario (debe retornar 201).
+   */
   describe("POST /api/v1/user - Crear usuario", () => {
     test("Debe retornar 201", async () => {
       const body = {
@@ -79,6 +103,9 @@ describe("Test rutas de usuario con respuesta satisfactoria", () => {
     });
   });
 
+  /**
+   * Testea la ruta GET /api/v1/users/:id - Obtener usuario por id (debe retornar 200).
+   */
   describe("GET /api/v1/users/:id - Obtener usuario por id", () => {
     test("Debe retornar 200", async () => {
       response = await request(server.app)
@@ -88,6 +115,9 @@ describe("Test rutas de usuario con respuesta satisfactoria", () => {
     });
   });
 
+  /**
+   * Testea la ruta PATCH /api/v1/users/:id - Actualizar usuario (debe retornar 200).
+   */
   describe("PATCH /api/v1/users/:id - Actualizar usuario", () => {
     test("Debe retornar 200", async () => {
       const body = {
@@ -101,6 +131,9 @@ describe("Test rutas de usuario con respuesta satisfactoria", () => {
     });
   });
 
+  /**
+   * Testea la ruta DELETE /api/v1/users/:id - Eliminar usuario (debe retornar 204).
+   */
   describe("DELETE /api/v1/users/:id - Eliminar usuario", () => {
     test("Debe retornar 204", async () => {
       response = await request(server.app)
@@ -111,10 +144,16 @@ describe("Test rutas de usuario con respuesta satisfactoria", () => {
   });
 });
 
+/**
+ * Testea las rutas de usuario con respuestas de valores esperados en el body de la respuesta.
+ */
 describe("Test rutas de usuario con respuestas de valores esperados", () => {
   let userId;
   let response;
 
+  /**
+   * Testea la ruta GET /api/v1/users - Obtener usuarios (debe retornar valor esperado).
+   */
   describe("GET /api/v1/users - Obtener usuarios", () => {
     test("Debe retornar valor esperado", async () => {
       response = await request(server.app).get("/api/v1/users").send();
@@ -123,6 +162,9 @@ describe("Test rutas de usuario con respuestas de valores esperados", () => {
     });
   });
 
+  /**
+   * Testea la ruta POST /api/v1/users - Crear usuario (debe retornar valor esperado).
+   */
   describe("POST /api/v1/user - Crear usuario", () => {
     test("Debe retornar valor esperado", async () => {
       const body = {
@@ -141,6 +183,9 @@ describe("Test rutas de usuario con respuestas de valores esperados", () => {
     });
   });
 
+  /**
+   * Testea la ruta GET /api/v1/users/:id - Obtener usuario por id (debe retornar valor esperado).
+   */
   describe("GET /api/v1/users/:id - Obtener usuario por id", () => {
     test("Debe retornar valor esperado", async () => {
       response = await request(server.app)
@@ -159,6 +204,9 @@ describe("Test rutas de usuario con respuestas de valores esperados", () => {
     });
   });
 
+  /**
+   * Testea la ruta PATCH /api/v1/users/:id - Actualizar usuario (debe retornar valor esperado).
+   */
   describe("PATCH /api/v1/users/:id - Actualizar usuario", () => {
     test("Debe retornar valor esperado", async () => {
       const body = {
@@ -180,6 +228,9 @@ describe("Test rutas de usuario con respuestas de valores esperados", () => {
     });
   });
 
+  /**
+   * Testea la ruta DELETE /api/v1/users/:id - Eliminar usuario (debe retornar valor esperado).
+   */
   describe("DELETE /api/v1/users/:id - Eliminar usuario", () => {
     test("Debe retornar valor esperado", async () => {
       response = await request(server.app)
@@ -189,6 +240,9 @@ describe("Test rutas de usuario con respuestas de valores esperados", () => {
     });
   });
 
+  /**
+   * Después de ejecutar todos los tests, desconectar la base de datos.
+   */
   afterAll((done) => {
     server.disconnectToDB();
     console.log("Desconectado de la base de datos");
