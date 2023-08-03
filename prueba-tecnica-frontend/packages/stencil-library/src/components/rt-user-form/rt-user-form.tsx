@@ -9,6 +9,8 @@ import { IRecord } from '../../interfaces/record.interface';
   shadow: true,
 })
 export class RtUserForm {
+  isEdit = window.location.pathname.includes('edit');
+
   @State() user: IUser = {
     names: '',
     surnames: '',
@@ -102,7 +104,12 @@ export class RtUserForm {
     this.loading = true;
     fetch(`http://localhost:8080/api/v1/users/${this.uid}`, {
       method: 'PATCH',
-      body: JSON.stringify(this.user),
+      body: JSON.stringify({
+        names: this.user.names,
+        surnames: this.user.surnames,
+        address: this.user.address,
+        description: this.user.description,
+      }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -151,7 +158,9 @@ export class RtUserForm {
         }
         this.user = parsedRes;
         this.loading = false;
-        this.updateRecords(RecordType.READ);
+        if (!this.isEdit) {
+          this.updateRecords(RecordType.READ);
+        }
       })
       .catch(err => {
         console.log(err);
@@ -200,7 +209,7 @@ export class RtUserForm {
         </div>
         <div>
           <label htmlFor="email">Correo Electrónico:</label>
-          <input type="text" id="email" name="email" required value={this.user.email} onInput={this.onUserInput.bind(this)} disabled={this.view || this.disabled} />
+          <input type="text" id="email" name="email" required value={this.user.email} onInput={this.onUserInput.bind(this)} disabled={this.view || this.disabled || this.isEdit} />
         </div>
         <div>
           <label htmlFor="address">Dirección:</label>
@@ -208,7 +217,7 @@ export class RtUserForm {
         </div>
         <div>
           <label htmlFor="dni">DNI:</label>
-          <input type="number" id="dni" name="dni" required value={this.user.dni} onInput={this.onUserInput.bind(this)} disabled={this.view || this.disabled} />
+          <input type="number" id="dni" name="dni" required value={this.user.dni} onInput={this.onUserInput.bind(this)} disabled={this.view || this.disabled || this.isEdit} />
         </div>
         <div>
           <label htmlFor="description">Descripción:</label>
@@ -216,7 +225,7 @@ export class RtUserForm {
         </div>
         <div>
           <label htmlFor="phone">Teléfono:</label>
-          <input type="tel" id="phone" name="phone" required value={this.user.phone} onInput={this.onUserInput.bind(this)} disabled={this.view || this.disabled} />
+          <input type="tel" id="phone" name="phone" required value={this.user.phone} onInput={this.onUserInput.bind(this)} disabled={this.view || this.disabled || this.isEdit} />
         </div>
         <p class={this.error ? 'error' : 'success'}>{this.message}</p>
         {content}

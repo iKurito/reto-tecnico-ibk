@@ -90,16 +90,13 @@ const createUser = async (req = request, res = response) => {
 const updateUser = async (req = request, res = response) => {
   try {
     const { id } = req.params;
-    const { names, surnames, email, address, dni, description, phone } =
-      req.body;
+    req.body;
+    const { names, surnames, address, description } = req.body;
     await User.findByIdAndUpdate(id, {
       names,
       surnames,
-      email,
       address,
-      dni,
       description,
-      phone,
     });
     const user = await User.findById(id);
     return res.status(200).json(user);
