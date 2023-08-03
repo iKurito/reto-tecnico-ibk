@@ -8,20 +8,6 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { RecordType } from "./data/record.data";
 export { RecordType } from "./data/record.data";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
-    }
     interface RtCard {
         "email": string;
         "names": string;
@@ -50,12 +36,6 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
-    }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
-    };
     interface HTMLRtCardElement extends Components.RtCard, HTMLStencilElement {
     }
     var HTMLRtCardElement: {
@@ -99,7 +79,6 @@ declare global {
         new (): HTMLRtUserFormElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
         "rt-card": HTMLRtCardElement;
         "rt-cards-fetched": HTMLRtCardsFetchedElement;
         "rt-footer": HTMLRtFooterElement;
@@ -110,20 +89,6 @@ declare global {
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
-    }
     interface RtCard {
         "email"?: string;
         "names"?: string;
@@ -151,7 +116,6 @@ declare namespace LocalJSX {
         "view"?: boolean;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
         "rt-card": RtCard;
         "rt-cards-fetched": RtCardsFetched;
         "rt-footer": RtFooter;
@@ -165,7 +129,6 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "rt-card": LocalJSX.RtCard & JSXBase.HTMLAttributes<HTMLRtCardElement>;
             "rt-cards-fetched": LocalJSX.RtCardsFetched & JSXBase.HTMLAttributes<HTMLRtCardsFetchedElement>;
             "rt-footer": LocalJSX.RtFooter & JSXBase.HTMLAttributes<HTMLRtFooterElement>;

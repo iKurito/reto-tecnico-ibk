@@ -13,20 +13,25 @@ $color-primary: #3f51b5
     justify-content: space-between
     align-items: flex-start
 
-  .svg-container
-    display: flex
-    justify-content: center
-    align-items: center
-    height: 24px
-    cursor: pointer
-    border: 1px solid $color-primary
-    padding: 16px 4px
-    background: transparent
-    border-radius: 5px
-
-    svg
-      width: 24px
+    .svg-container
+      display: flex
+      justify-content: center
+      align-items: center
       height: 24px
+      cursor: pointer
+      border: 1px solid $color-primary
+      padding: 16px 4px
+      background: transparent
+      border-radius: 5px
+
+      svg
+        width: 24px
+        height: 24px
+
+      &:hover
+        background: $color-primary
+        color: white
+        fill: white
 
   .btn-container
     display: flex
