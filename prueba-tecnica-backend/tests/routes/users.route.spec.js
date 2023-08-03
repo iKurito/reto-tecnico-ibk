@@ -3,6 +3,53 @@ const request = require("supertest");
 
 const server = new Server();
 
+describe("Test rutas de usuario con respuesta de error", () => {
+  let userId = "123456789";
+  let response;
+
+  describe("POST /api/v1/user - Crear usuario", () => {
+    test("Debe retornar 400", async () => {
+      const body = {
+        names: "Test",
+        surnames: "Post",
+      };
+      response = await request(server.app).post("/api/v1/users").send(body);
+      expect(response.statusCode).toBe(400);
+    });
+  });
+
+  describe("GET /api/v1/users/:id - Obtener usuario por id", () => {
+    test("Debe retornar 400", async () => {
+      response = await request(server.app)
+        .get(`/api/v1/users/${userId}`)
+        .send();
+      expect(response.statusCode).toBe(400);
+    });
+  });
+
+  describe("PATCH /api/v1/users/:id - Actualizar usuario", () => {
+    test("Debe retornar 400", async () => {
+      const body = {
+        names: "Actualizar",
+        surnames: "Test",
+      };
+      response = await request(server.app)
+        .patch(`/api/v1/users/${userId}`)
+        .send(body);
+      expect(response.statusCode).toBe(400);
+    });
+  });
+
+  describe("DELETE /api/v1/users/:id - Eliminar usuario", () => {
+    test("Debe retornar 400", async () => {
+      response = await request(server.app)
+        .delete(`/api/v1/users/${userId}`)
+        .send();
+      expect(response.statusCode).toBe(400);
+    });
+  });
+});
+
 describe("Test rutas de usuario con respuesta satisfactoria", () => {
   let userId;
   let response;
@@ -20,6 +67,10 @@ describe("Test rutas de usuario con respuesta satisfactoria", () => {
         names: "Test",
         surnames: "Post",
         email: "test@post.com",
+        address: "Calle 123",
+        phone: "123456789",
+        dni: "12345678",
+        description: "Test Description",
       };
       response = await request(server.app).post("/api/v1/users").send(body);
       const { uid } = JSON.parse(response.text);
