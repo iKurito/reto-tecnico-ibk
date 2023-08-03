@@ -2,6 +2,15 @@ const { response, request } = require("express");
 
 const { User } = require("../models");
 
+/**
+ * Obtiene una lista de usuarios con paginación.
+ *
+ * @route GET /api/users
+ * @param {Object} req - El objeto de solicitud HTTP.
+ * @param {Object} res - El objeto de respuesta HTTP.
+ * @returns {Object} - Un objeto JSON que contiene el total de usuarios y una lista de usuarios.
+ * @throws {Object} - Un objeto JSON con un mensaje de error en caso de que falle la consulta.
+ */
 const getUsers = async (req = request, res = response) => {
   try {
     const { limit = process.env.LIMIT, from = 0 } = req.query;
@@ -17,6 +26,15 @@ const getUsers = async (req = request, res = response) => {
   }
 };
 
+/**
+ * Obtiene un usuario por su ID.
+ *
+ * @route GET /api/users/:id
+ * @param {Object} req - El objeto de solicitud HTTP.
+ * @param {Object} res - El objeto de respuesta HTTP.
+ * @returns {Object} - Un objeto JSON que contiene los detalles del usuario encontrado.
+ * @throws {Object} - Un objeto JSON con un mensaje de error en caso de que falle la consulta.
+ */
 const getUserById = async (req = request, res = response) => {
   try {
     const { id } = req.params;
@@ -29,6 +47,15 @@ const getUserById = async (req = request, res = response) => {
   }
 };
 
+/**
+ * Crea un nuevo usuario.
+ *
+ * @route POST /api/users
+ * @param {Object} req - El objeto de solicitud HTTP.
+ * @param {Object} res - El objeto de respuesta HTTP.
+ * @returns {Object} - Un objeto JSON que contiene los detalles del usuario creado.
+ * @throws {Object} - Un objeto JSON con un mensaje de error en caso de que falle la creación del usuario.
+ */
 const createUser = async (req = request, res = response) => {
   try {
     const { names, surnames, email, address, dni, description, phone } =
@@ -51,6 +78,15 @@ const createUser = async (req = request, res = response) => {
   }
 };
 
+/**
+ * Actualiza los detalles de un usuario existente.
+ *
+ * @route PUT /api/users/:id
+ * @param {Object} req - El objeto de solicitud HTTP.
+ * @param {Object} res - El objeto de respuesta HTTP.
+ * @returns {Object} - Un objeto JSON que contiene los detalles actualizados del usuario.
+ * @throws {Object} - Un objeto JSON con un mensaje de error en caso de que falle la actualización del usuario.
+ */
 const updateUser = async (req = request, res = response) => {
   try {
     const { id } = req.params;
@@ -74,6 +110,15 @@ const updateUser = async (req = request, res = response) => {
   }
 };
 
+/**
+ * Elimina un usuario por su ID.
+ *
+ * @route DELETE /api/users/:id
+ * @param {Object} req - El objeto de solicitud HTTP.
+ * @param {Object} res - El objeto de respuesta HTTP.
+ * @returns {Number} - Un código de estado 204 indicando que la eliminación fue exitosa.
+ * @throws {Object} - Un objeto JSON con un mensaje de error en caso de que falle la eliminación del usuario.
+ */
 const removeUser = async (req = request, res = response) => {
   try {
     const { id } = req.params;
