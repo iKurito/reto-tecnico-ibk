@@ -1,5 +1,5 @@
 interface RtRecordArgs {
-  fecha: string;
+  date: string;
   names: string;
   surnames: string;
   email: string;
@@ -13,7 +13,7 @@ export default {
 
 const Template = (args: RtRecordArgs) => `
   <rt-record
-    fecha="${args.fecha}"
+    date="${args.date}"
     names="${args.names}"
     surnames="${args.surnames}"
     email="${args.email}"
@@ -24,7 +24,7 @@ const Template = (args: RtRecordArgs) => `
 export const Example = Template.bind({});
 
 Example.args = {
-  fecha: '2021-09-01',
+  date: '2021-09-01',
   names: 'Ronaldo Romario',
   surnames: 'Tunque Cahui',
   email: 'ronaldo.tunque@pucp.edu.pe',

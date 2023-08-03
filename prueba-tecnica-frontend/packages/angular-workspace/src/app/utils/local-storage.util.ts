@@ -2,7 +2,7 @@ export class LocalStorageUtil {
   constructor() { }
 
   getData() {
-    return JSON.parse(localStorage.getItem('records') || '{ data: [] }');
+    return JSON.parse(localStorage.getItem('records') || '[]');
   }
 
   clearStorage() {

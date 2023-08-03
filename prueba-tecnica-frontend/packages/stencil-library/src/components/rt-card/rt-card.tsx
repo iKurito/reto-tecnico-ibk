@@ -1,19 +1,6 @@
 import { Component, Prop, h } from '@stencil/core';
-
-interface Records {
-  data: Record[];
-}
-
-interface Record {
-  id: string;
-  user: User;
-}
-
-interface User {
-  names: string;
-  surnames: string;
-  email: string;
-}
+import { RecordType } from '../../data/record.data';
+import { IRecord } from '../../interfaces/record.interface';
 
 @Component({
   tag: 'rt-card',
@@ -44,7 +31,7 @@ export class RtCard {
         if (res.status !== 200) {
           throw new Error('Error');
         }
-        this.updateRecords();
+        this.updateRecords(RecordType.DELETE);
         window.location.reload();
         return res.json();
       })
@@ -53,9 +40,16 @@ export class RtCard {
       });
   }
 
-  updateRecords() {
-    const records: Records = JSON.parse(localStorage.getItem('records')) ?? { data: [] };
-    records.data.push({ id: this.uid, user: { names: this.names, surnames: this.surnames, email: this.email } });
+  updateRecords(type: RecordType) {
+    const records: IRecord[] = JSON.parse(localStorage.getItem('records')) ?? [];
+    records.push({
+      id: this.uid,
+      names: this.names,
+      surnames: this.surnames,
+      email: this.email,
+      type: type,
+      dateString: new Date().toLocaleDateString('es-PE') + ' ' + new Date().toLocaleTimeString('es-PE'),
+    });
     localStorage.setItem('records', JSON.stringify(records));
   }
 

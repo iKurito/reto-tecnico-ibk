@@ -1,14 +1,7 @@
 import { Component, Prop, State, h } from '@stencil/core';
-
-interface User {
-  names: string;
-  surnames: string;
-  email: string;
-  address: string;
-  dni: string;
-  description: string;
-  phone: string;
-}
+import { RecordType } from '../../data/record.data';
+import { IUser } from '../../interfaces/user.interface';
+import { IRecord } from '../../interfaces/record.interface';
 
 @Component({
   tag: 'rt-user-form',
@@ -16,7 +9,7 @@ interface User {
   shadow: true,
 })
 export class RtUserForm {
-  @State() user: User = {
+  @State() user: IUser = {
     names: '',
     surnames: '',
     email: '',
@@ -94,6 +87,7 @@ export class RtUserForm {
         this.user = parsedRes;
         this.loading = false;
         this.message = 'Usuario creado correctamente';
+        this.updateRecords(RecordType.CREATE);
         this.error = false;
       })
       .catch(err => {
@@ -126,6 +120,7 @@ export class RtUserForm {
         this.user = parsedRes;
         this.loading = false;
         this.message = 'Usuario actualizado correctamente';
+        this.updateRecords(RecordType.UPDATE);
         this.error = false;
       })
       .catch(err => {
@@ -156,11 +151,26 @@ export class RtUserForm {
         }
         this.user = parsedRes;
         this.loading = false;
+        this.updateRecords(RecordType.READ);
       })
       .catch(err => {
         console.log(err);
         this.loading = false;
       });
+  }
+
+  updateRecords(type: RecordType) {
+    const records: IRecord[] = JSON.parse(localStorage.getItem('records')) ?? [];
+    console.log(records);
+    records.push({
+      id: this.uid,
+      names: this.user.names,
+      surnames: this.user.surnames,
+      email: this.user.email,
+      type: type,
+      dateString: new Date().toLocaleDateString('es-PE') + ' ' + new Date().toLocaleTimeString('es-PE'),
+    });
+    localStorage.setItem('records', JSON.stringify(records));
   }
 
   render() {

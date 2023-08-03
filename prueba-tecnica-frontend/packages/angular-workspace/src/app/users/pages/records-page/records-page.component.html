@@ -2,8 +2,14 @@
 <hr />
 <!-- Estructura de la carta -->
 <div class="container">
-  <div id="{{'card-' + record.id}}" *ngFor="let record of records.data">
-    <rt-record names={{record.user.names}} surnames={{record.user.surnames}} email={{record.user.email}}></rt-record>
+  <div id="{{'card-' + record.id}}" *ngFor="let record of records">
+    <rt-record
+      names={{record.names}}
+      surnames={{record.surnames}}
+      email={{record.email}}
+      dateString={{record.dateString}}
+      type={{record.type}}>
+    </rt-record>
     <button style="width: 100%; margin-top: 10px;" (click)="crearImagen(record.id)">Descargar constancia</button>
     <a id="{{'download-' + record.id}}" type="button" style="visibility: hidden;" href="{{img}}" download> 
       Descargar

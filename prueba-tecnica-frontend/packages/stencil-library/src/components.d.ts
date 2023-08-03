@@ -35,8 +35,8 @@ export namespace Components {
     interface RtHeader {
     }
     interface RtRecord {
+        "dateString": string;
         "email": string;
-        "fecha": string;
         "names": string;
         "surnames": string;
         "type": RecordType;
@@ -137,8 +137,8 @@ declare namespace LocalJSX {
     interface RtHeader {
     }
     interface RtRecord {
+        "dateString"?: string;
         "email"?: string;
-        "fecha"?: string;
         "names"?: string;
         "surnames"?: string;
         "type"?: RecordType;
