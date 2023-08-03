@@ -115,6 +115,28 @@ export declare interface RtHeader extends Components.RtHeader {}
 
 
 @ProxyCmp({
+  inputs: ['email', 'fecha', 'names', 'surnames', 'type']
+})
+@Component({
+  selector: 'rt-record',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['email', 'fecha', 'names', 'surnames', 'type'],
+})
+export class RtRecord {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface RtRecord extends Components.RtRecord {}
+
+
+@ProxyCmp({
 })
 @Component({
   selector: 'rt-spinner',

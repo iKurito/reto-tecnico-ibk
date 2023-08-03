@@ -5,6 +5,8 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { RecordType } from "./data/record.data";
+export { RecordType } from "./data/record.data";
 export namespace Components {
     interface MyComponent {
         /**
@@ -31,6 +33,13 @@ export namespace Components {
     interface RtFooter {
     }
     interface RtHeader {
+    }
+    interface RtRecord {
+        "email": string;
+        "fecha": string;
+        "names": string;
+        "surnames": string;
+        "type": RecordType;
     }
     interface RtSpinner {
     }
@@ -71,6 +80,12 @@ declare global {
         prototype: HTMLRtHeaderElement;
         new (): HTMLRtHeaderElement;
     };
+    interface HTMLRtRecordElement extends Components.RtRecord, HTMLStencilElement {
+    }
+    var HTMLRtRecordElement: {
+        prototype: HTMLRtRecordElement;
+        new (): HTMLRtRecordElement;
+    };
     interface HTMLRtSpinnerElement extends Components.RtSpinner, HTMLStencilElement {
     }
     var HTMLRtSpinnerElement: {
@@ -89,6 +104,7 @@ declare global {
         "rt-cards-fetched": HTMLRtCardsFetchedElement;
         "rt-footer": HTMLRtFooterElement;
         "rt-header": HTMLRtHeaderElement;
+        "rt-record": HTMLRtRecordElement;
         "rt-spinner": HTMLRtSpinnerElement;
         "rt-user-form": HTMLRtUserFormElement;
     }
@@ -120,6 +136,13 @@ declare namespace LocalJSX {
     }
     interface RtHeader {
     }
+    interface RtRecord {
+        "email"?: string;
+        "fecha"?: string;
+        "names"?: string;
+        "surnames"?: string;
+        "type"?: RecordType;
+    }
     interface RtSpinner {
     }
     interface RtUserForm {
@@ -133,6 +156,7 @@ declare namespace LocalJSX {
         "rt-cards-fetched": RtCardsFetched;
         "rt-footer": RtFooter;
         "rt-header": RtHeader;
+        "rt-record": RtRecord;
         "rt-spinner": RtSpinner;
         "rt-user-form": RtUserForm;
     }
@@ -146,6 +170,7 @@ declare module "@stencil/core" {
             "rt-cards-fetched": LocalJSX.RtCardsFetched & JSXBase.HTMLAttributes<HTMLRtCardsFetchedElement>;
             "rt-footer": LocalJSX.RtFooter & JSXBase.HTMLAttributes<HTMLRtFooterElement>;
             "rt-header": LocalJSX.RtHeader & JSXBase.HTMLAttributes<HTMLRtHeaderElement>;
+            "rt-record": LocalJSX.RtRecord & JSXBase.HTMLAttributes<HTMLRtRecordElement>;
             "rt-spinner": LocalJSX.RtSpinner & JSXBase.HTMLAttributes<HTMLRtSpinnerElement>;
             "rt-user-form": LocalJSX.RtUserForm & JSXBase.HTMLAttributes<HTMLRtUserFormElement>;
         }

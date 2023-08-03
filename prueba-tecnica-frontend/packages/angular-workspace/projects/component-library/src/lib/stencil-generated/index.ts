@@ -7,6 +7,7 @@ export const DIRECTIVES = [
   d.RtCardsFetched,
   d.RtFooter,
   d.RtHeader,
+  d.RtRecord,
   d.RtSpinner,
   d.RtUserForm
 ];
