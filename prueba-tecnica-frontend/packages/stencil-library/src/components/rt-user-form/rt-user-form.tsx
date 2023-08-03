@@ -161,9 +161,9 @@ export class RtUserForm {
 
   updateRecords(type: RecordType) {
     const records: IRecord[] = JSON.parse(localStorage.getItem('records')) ?? [];
-    console.log(records);
+    const id = Date.now().toString(36) + Math.random().toString(36).substring(2);
     records.push({
-      id: this.uid,
+      id: id,
       names: this.user.names,
       surnames: this.user.surnames,
       email: this.user.email,
