@@ -1,8 +1,10 @@
-<h1>Constancias registradas</h1>
+<div class="header">
+  <h1>Constancias registradas</h1>
+  <button type="button" (click)="limpiar()">Limpiar Constancias</button>
+</div>
 <hr />
-<!-- Estructura de la carta -->
 <div class="container">
-  <div  *ngFor="let record of records">
+  <div class="card" *ngFor="let record of records">
     <rt-record
       id="{{'card-' + record.id}}"
       names={{record.names}}
@@ -11,7 +13,7 @@
       dtime={{record.dtime}}
       type={{record.type}}>
     </rt-record>
-    <button style="width: 100%; margin-top: 10px;" (click)="crearImagen(record.id)">Descargar constancia</button>
+    <button (click)="crearImagen(record.id)">Descargar constancia</button>
     <a id="{{'download-' + record.id}}" type="button" style="visibility: hidden;" href="{{img}}" download> 
       Descargar
     </a>

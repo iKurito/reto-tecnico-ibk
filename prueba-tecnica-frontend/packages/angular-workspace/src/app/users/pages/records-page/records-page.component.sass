@@ -1,19 +1,59 @@
-h1
-  margin-bottom: 0.5rem
+.header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 7px
 
   @media screen and (max-width: 600px)
-    text-align: center
+    flex-direction: column
+
+  h1
+    margin-bottom: 0.5rem
+
+    @media screen and (max-width: 600px)
+      text-align: center
+
+  button
+    padding: 0.25rem 0.75rem
+    background: #3f51b5
+    color: white
+    text-decoration: none
+    justify-content: center
+    align-items: center
+    border-radius: 5px
+    cursor: pointer
+
+    &:hover
+      background: darken(#3f51b5, 10%)
+
+    @media screen and (max-width: 600px)
+      width: 100%
+
+  @media screen and (max-width: 600px)
+    grid-template-columns: 1fr
+    gap: 0.5rem
 
 .container
   display: grid
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
   gap: 1rem
 
+  @media screen and (max-width: 600px)
+    grid-template-columns: 1fr
+    gap: 0.5rem
+
+  .card
+    overflow: auto
+
+    @media screen and (max-width: 600px)
+      max-width: auto
+
   button
     margin-top: 10px
     padding: 0.25rem 0.75rem
     background: #3f51b5
     color: white
+    width: 100%
     text-decoration: none
     display: flex
     justify-content: center
@@ -26,7 +66,3 @@ h1
 
       @media screen and (max-width: 600px)
         width: 100%
-
-  @media screen and (max-width: 600px)
-    grid-template-columns: 1fr
-    gap: 0.5rem

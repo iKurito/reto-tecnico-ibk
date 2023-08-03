@@ -28,4 +28,9 @@ export class RecordsPageComponent implements OnInit {
       a.click();
     }, 1000)
   }
+
+  limpiar() {
+    this.localStorageUtil.clearStorage();
+    this.records = this.localStorageUtil.getData();
+  }
 }
