@@ -6,6 +6,24 @@
 
 El **User Management System** es un sistema CRUD para el mantenimiento de usuarios. Permite realizar operaciones básicas de crear, leer, actualizar y eliminar usuarios, y genera una constancia después de cada operación realizada. La constancia incluye la información de la operación y cuenta con un botón de descarga para guardarla como imagen.
 
+## Requisitos Mínimos
+
+Para poder correr este proyecto en tu máquina local, asegúrate de tener instalado lo siguiente:
+
+- Node.js (versión 16 o superior): Puedes descargar Node.js desde su sitio web oficial: https://nodejs.org/
+
+- Angular (versión 14): Angular es necesario para integrar funcionalidades adicionales en el frontend. Puedes instalar Angular globalmente usando el siguiente comando:
+
+  ```bash
+  npm install -g @angular/cli@14
+  ```
+
+- StencilJS: StencilJS es utilizado para desarrollar los componentes web del Microfrontend. Puedes instalar StencilJS globalmente con el siguiente comando:
+
+  ```
+  npm install -g @stencil/core
+  ```
+
 ## Instalación y Configuración
 
 Para instalar y ejecutar el sistema, sigue estos pasos:
@@ -20,25 +38,65 @@ git clone https://github.com/iKurito/reto-tecnico-ibk.git
 cd reto-tecnico-ibk
 ```
 
-2. Ejecutar el comando para construir las respectivas imágenes de Docker:
+2. Dirígete a la carpeta `prueba-tecnica-backend` y ejecuta los siguientes comandos:
 
-```bash
-docker compose build
-```
+- Para instalar las dependencias del proyecto:
 
-3. Ejecutar el comando para levantar los contenedores:
+  ```bash
+  yarn
+  ```
 
-```bash
-docker compose up -d
-```
+- Para ejecutar el servidor:
 
-El servidor estará disponible en `http://localhost`.
+  ```bash
+  yarn dev
+  ```
 
-Para terminar la ejecución de los contenedores, ejecutar el siguiente comando:
+  El servidor estará disponible en `http://localhost:8080`.
 
-```bash
-docker compose down
-```
+3. Dirígete a la carpeta `prueba-tecnica-frontend` y ejecuta los siguientes comandos:
+
+- Para instalar las dependencias del proyecto que permiten la comunicación entre stencil-library y angular-workspace:
+
+  ```bash
+  npm install
+  ```
+
+4. Dirígete a la carpeta `prueba-tecnica-frontend/packages/stencil-library` y ejecuta los siguientes comandos:
+
+- Para instalar las dependencias del proyecto:
+
+  ```bash
+  npm install
+  ```
+
+- Para compilar los componentes web:
+
+  ```bash
+  npm run build
+  ```
+
+5. Dirígete a la carpeta `prueba-tecnica-frontend/packages/angular-workspace` y ejecuta los siguientes comandos:
+
+- Para instalar las dependencias del proyecto:
+
+  ```bash
+  npm install
+  ```
+
+- Para compilar los componentes web elaborados con Stencil:
+
+  ```bash
+  ng build component-library
+  ```
+
+- Para ejecutar la aplicación:
+
+  ```bash
+  npm start
+  ```
+
+  La aplicación estará disponible en `http://localhost:4200`.
 
 ## Microfrontend con Stencil y Angular
 
@@ -48,11 +106,17 @@ El frontend está desarrollado con Stencil para los componentes web y Angular (v
 
 Los componentes web se encuentran en la carpeta <a href="https://github.com/iKurito/reto-tecnico-ibk/tree/main/prueba-tecnica-frontend/packages/stencil-library" target="_blank" >`/prueba-tecnica-frontend/packages/stencil-library`</a>.
 
-Puedes ver y probar cada componente utilizando Storybook:
-
 ```bash
 npm run storybook
 ```
+
+Puedes ver y probar cada componente utilizando Storybook:
+
+```bash
+npx stencil build --watch
+```
+
+Para compilar los componentes en tiempo real mientras realizas cambios, utiliza:
 
 Storybook estará disponible en `http://localhost:6006`.
 
