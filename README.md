@@ -12,6 +12,8 @@ Para poder correr este proyecto en tu máquina local, asegúrate de tener instal
 
 - Node.js (versión 16 o superior): Puedes descargar Node.js desde su sitio web oficial: https://nodejs.org/
 
+- Docker: Docker es necesario para el despliegue del proyecto en contenedores. Puedes descargar Docker desde su sitio web oficial: https://www.docker.com/get-started
+
 - Angular (versión 14): Angular es necesario para integrar funcionalidades adicionales en el frontend. Puedes instalar Angular globalmente usando el siguiente comando:
 
   ```bash
@@ -47,6 +49,12 @@ cd reto-tecnico-ibk
   ```
 
 - Para configurar las variables de entorno, crea un archivo `.env` en la raíz del proyecto y copia el contenido del archivo `.env.etemplate` en él. Luego, reemplaza los valores de las variables de entorno con los valores correspondientes.
+
+- Desplegar la base de datos MongoDB en un contenedor Docker:
+
+  ```bash
+  docker-compose up -d
+  ```
 
 - Para ejecutar el servidor:
 
