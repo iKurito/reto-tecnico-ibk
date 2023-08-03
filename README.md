@@ -130,11 +130,11 @@ El cliente del Microfrontend utiliza iFrame para visualizar el User Management S
 
   La aplicación estará disponible en `http://localhost:5173`.
 
-2. Accediendo al Sandbox en línea: `https://codesandbox.io/s/strange-poitras-x42w3k?file=/index.html` o `https://x42w3k.csb.app/`.
+2. Accediendo al Sandbox en línea: <a href="https://codesandbox.io/s/strange-poitras-x42w3k?file=/index.html">`https://codesandbox.io/s/strange-poitras-x42w3k?file=/index.html`</a> o <a href="https://x42w3k.csb.app/">`https://x42w3k.csb.app/`</a>.
 
 ## Contribución
 
-¡Agradecemos las contribuciones! Si deseas contribuir a Awesome User Management System, sigue los pasos descritos en <a href="https://github.com/iKurito/reto-tecnico-ibk/blob/main/CONTRIBUTING.md" target="_blank">`CONTRIBUTING.md`</a>.
+¡Agradecemos las contribuciones! Si deseas contribuir a User Management System, sigue los pasos descritos en <a href="https://github.com/iKurito/reto-tecnico-ibk/blob/main/CONTRIBUTING.md" target="_blank">`CONTRIBUTING.md`</a>.
 
 ## Licencia
 
