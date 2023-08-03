@@ -1,3 +1,183 @@
+commit dfd73a15272cfb2615515fa5efa45e3eab62d4c9
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 10:48:55 2023 -0500
+
+    feat: update id on rt-record
+
+commit f0430be591df16930057f3dd41954ce0cd599b71
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 10:46:53 2023 -0500
+
+    feat: update user form and users controller
+
+commit b64253f8a737c14cd5d3cccaea34bb6245804482
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 10:29:53 2023 -0500
+
+    feat: add description on every story
+
+commit 8ece359b3254a66777ad2277926af69e951c0e72
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 10:05:51 2023 -0500
+
+    feat: add description on every function
+
+commit 89ee10c8db579cd5a93b9c4e932a2e5b3610bc23
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 09:54:47 2023 -0500
+
+    feat: add description on users controllers
+
+commit 1b6be30685a9a0e83e1fe1e46f21122b5b45b233
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 09:50:34 2023 -0500
+
+    test: add description on tests
+
+commit f0f66d31758419f2eec94da32387741b98e2a35d
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 09:47:36 2023 -0500
+
+    test: add more users tests
+
+commit 31b876d257d16000e5924d131a2eaedc19c5568e
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 09:41:51 2023 -0500
+
+    docs: update openApiDocumentation
+
+commit 86deab773a9afed6d7438d83d17f2afa51ff7242
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 09:28:10 2023 -0500
+
+    docs: update openApiDocumentation
+
+commit 78c21ea3d21a29d69bd459fb88282568976cdd1f
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 09:25:53 2023 -0500
+
+    docs: update openApiDocumentation
+
+commit ddbee1ec4cadf6c48168bf0082a1150d746380c3
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 09:25:25 2023 -0500
+
+    feat: update users controller
+
+commit 43fe6c5c0b6ae0a8c4681ddf70c3feb652557801
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 09:22:23 2023 -0500
+
+    build: update docker-compose.yml
+
+commit 230097d41b13de7cfa8d0d3f2f115f7e418cabd7
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 09:21:54 2023 -0500
+
+    test: add more users tests
+
+commit 2dc1fc84780e691b45300dc087761a65baa40da3
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 08:50:53 2023 -0500
+
+    feat: add message in RtCardsFetched
+
+commit fcdee864fc2733f4229af091052c2e7e39d66db6
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 08:32:52 2023 -0500
+
+    build: build component library
+
+commit 3b71ee4d8e94a9afac21b6d54cc2522c0c6ab474
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 08:27:23 2023 -0500
+
+    docs: update README.md
+
+commit ad91e4bf687be41bbe7ba11a7da9ea5829e59248
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 08:25:00 2023 -0500
+
+    docs: update README.md
+
+commit ed579763ea3c6537989b72ac958f807d2fb4d5d6
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 08:21:25 2023 -0500
+
+    docs: update README.md
+
+commit b0149ea6a8c54e191d9c402cec164c08b947b7ba
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 08:12:46 2023 -0500
+
+    docs: update README.md
+
+commit b2a9d8d91e12f39abb9e9e230759041e023b4c07
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 07:53:36 2023 -0500
+
+    docs: update README.md
+
+commit b7180d8187cc46f8e0ca561ad7d323a9e3c4c236
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 07:52:12 2023 -0500
+
+    docs: update README.md
+
+commit 10ca2f893d95f829396bec0715551936169cba50
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 07:46:20 2023 -0500
+
+    docs: update README.md
+
+commit ec9ff4ef896241a39f931e466661fc97c40f2e1a
+Author: Ronaldo Tunque <44411528+iKurito@users.noreply.github.com>
+Date:   Thu Aug 3 07:45:05 2023 -0500
+
+    docs: Create LICENSE
+
+commit 72dbe6800803591838aeaca4e57c421a138d66b9
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 07:42:05 2023 -0500
+
+    feat: add microfrontend-client pointing to sandbox
+
+commit 3b9bf5c6df1ff930e2999c83a772de30ca586027
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 07:24:15 2023 -0500
+
+    docs: add CONTRIBUTING.md
+
+commit f85d0e8e15c7009e500edf4a2760a1e7e281eec7
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 07:16:11 2023 -0500
+
+    docs: update README.md
+
+commit 02a49470f2fc24f6c32fcfe44507130314f76ccc
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 06:44:40 2023 -0500
+
+    docs: update README.md
+
+commit 33a22dc36c49fff71ec167e944d5be73be906b2a
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 06:44:13 2023 -0500
+
+    style: update iframe style
+
+commit 70e56108f4670ccfb0eaa8514250173c68ad3785
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 06:12:15 2023 -0500
+
+    fix: check if it is boolean
+
+commit 3d9cf2ee536a452d5b6f1785f25f2962b92d9ecb
+Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
+Date:   Thu Aug 3 05:58:04 2023 -0500
+
+    feat: add environment variables and show commits
+
 commit c8253d19f8946b99ff88b8c61772958b67667b39
 Author: Ronaldo <ronaldo.tunque@pucp.edu.pe>
 Date:   Thu Aug 3 04:04:14 2023 -0500
