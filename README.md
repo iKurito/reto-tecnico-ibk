@@ -46,6 +46,8 @@ cd reto-tecnico-ibk
   yarn
   ```
 
+- Para configurar las variables de entorno, crea un archivo `.env` en la raíz del proyecto y copia el contenido del archivo `.env.etemplate` en él. Luego, reemplaza los valores de las variables de entorno con los valores correspondientes.
+
 - Para ejecutar el servidor:
 
   ```bash
@@ -83,6 +85,8 @@ cd reto-tecnico-ibk
   ```bash
   npm install
   ```
+
+- Para configurar las variables de entorno, usted puede dirigirse al archivo `environment.ts` y reemplazar los valores de las variables de entorno con los valores correspondientes.
 
 - Para compilar los componentes web elaborados con Stencil:
 
