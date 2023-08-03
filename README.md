@@ -144,7 +144,7 @@ docker run -d -p 80:80 awesome-user-management-sandbox
 
 ## Licencia
 
-Este proyecto se distribuye bajo la licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+Este proyecto se distribuye bajo la licencia MIT. Consulta el archivo <a href="https://github.com/iKurito/reto-tecnico-ibk/blob/main/LICENSE" target="_blank">`LICENSE`</a> para más detalles.
 
 ## Contacto y Soporte
 
