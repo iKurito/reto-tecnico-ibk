@@ -2,8 +2,9 @@
 <hr />
 <!-- Estructura de la carta -->
 <div class="container">
-  <div id="{{'card-' + record.id}}" *ngFor="let record of records">
+  <div  *ngFor="let record of records">
     <rt-record
+      id="{{'card-' + record.id}}"
       names={{record.names}}
       surnames={{record.surnames}}
       email={{record.email}}
