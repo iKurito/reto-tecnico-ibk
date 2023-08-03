@@ -1,1 +1,12 @@
-<p>layout-page works!</p>
+<rt-header>
+  <ul>
+    <li [routerLink]="['/users/list']">Prueba Técnica</li>
+    <li [routerLink]="['/users/list']">Inicio</li>
+  </ul>
+</rt-header>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+<rt-footer>
+    <span>Prueba Técnica</span>
+</rt-footer>
