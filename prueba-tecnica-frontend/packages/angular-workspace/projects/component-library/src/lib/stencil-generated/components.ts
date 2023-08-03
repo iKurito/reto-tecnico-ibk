@@ -93,14 +93,14 @@ export declare interface RtHeader extends Components.RtHeader {}
 
 
 @ProxyCmp({
-  inputs: ['dateString', 'email', 'names', 'surnames', 'type']
+  inputs: ['dtime', 'email', 'names', 'surnames', 'type']
 })
 @Component({
   selector: 'rt-record',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['dateString', 'email', 'names', 'surnames', 'type'],
+  inputs: ['dtime', 'email', 'names', 'surnames', 'type'],
 })
 export class RtRecord {
   protected el: HTMLElement;

@@ -48,7 +48,7 @@ export class RtCard {
       surnames: this.surnames,
       email: this.email,
       type: type,
-      dateString: new Date().toLocaleDateString('es-PE') + ' ' + new Date().toLocaleTimeString('es-PE'),
+      dtime: new Date().toLocaleDateString('es-PE') + ' ' + new Date().toLocaleTimeString('es-PE'),
     });
     localStorage.setItem('records', JSON.stringify(records));
   }

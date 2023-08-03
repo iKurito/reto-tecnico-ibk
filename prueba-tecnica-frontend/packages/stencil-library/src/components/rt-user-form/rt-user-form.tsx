@@ -168,7 +168,7 @@ export class RtUserForm {
       surnames: this.user.surnames,
       email: this.user.email,
       type: type,
-      dateString: new Date().toLocaleDateString('es-PE') + ' ' + new Date().toLocaleTimeString('es-PE'),
+      dtime: new Date().toLocaleDateString('es-PE') + ' ' + new Date().toLocaleTimeString('es-PE'),
     });
     localStorage.setItem('records', JSON.stringify(records));
   }

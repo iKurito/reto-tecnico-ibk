@@ -10,7 +10,7 @@ export class RtFooter {
     return (
       <footer>
         <slot></slot>
-        <p>&copy; 2023 - Todos los derechos reservados</p>
+        <p>&copy; 2023 - Hecho por Ronaldo Romario Tunque Cahui</p>
       </footer>
     );
   }

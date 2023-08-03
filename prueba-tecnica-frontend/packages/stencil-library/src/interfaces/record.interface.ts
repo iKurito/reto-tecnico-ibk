@@ -6,5 +6,5 @@ export interface IRecord {
   surnames: string;
   email: string;
   type: RecordType;
-  dateString: string;
+  dtime: string;
 }

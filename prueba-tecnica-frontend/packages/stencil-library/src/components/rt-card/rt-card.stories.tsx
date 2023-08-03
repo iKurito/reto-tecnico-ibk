@@ -7,6 +7,7 @@ interface RtCardArgs {
 
 export default {
   title: 'Components/RtCard',
+  tags: ['autodocs'],
 };
 
 const Template = (args: RtCardArgs) => `

@@ -7,11 +7,11 @@ import { RecordType } from '../../data/record.data';
   shadow: true,
 })
 export class RtRecord {
-  @Prop() dateString: string;
   @Prop() names: string;
   @Prop() surnames: string;
   @Prop() email: string;
   @Prop() type: RecordType;
+  @Prop() dtime: string;
 
   render() {
     return (
@@ -24,7 +24,7 @@ export class RtRecord {
             <strong>Tipo:</strong> {this.type}
           </p>
           <p>
-            <strong>Fecha:</strong> {this.dateString}
+            <strong>Fecha:</strong> {this.dtime}
           </p>
           <p>
             <strong>Nombre:</strong> {this.names} {this.surnames}
