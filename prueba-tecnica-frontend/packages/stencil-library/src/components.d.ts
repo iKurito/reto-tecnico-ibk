@@ -20,6 +20,25 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface RtCard {
+        "email": string;
+        "names": string;
+        "surnames": string;
+        "uid": string;
+    }
+    interface RtCardsFetched {
+    }
+    interface RtFooter {
+    }
+    interface RtHeader {
+    }
+    interface RtSpinner {
+    }
+    interface RtUserForm {
+        "btnName": string;
+        "uid": string;
+        "view": boolean;
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -28,8 +47,50 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLRtCardElement extends Components.RtCard, HTMLStencilElement {
+    }
+    var HTMLRtCardElement: {
+        prototype: HTMLRtCardElement;
+        new (): HTMLRtCardElement;
+    };
+    interface HTMLRtCardsFetchedElement extends Components.RtCardsFetched, HTMLStencilElement {
+    }
+    var HTMLRtCardsFetchedElement: {
+        prototype: HTMLRtCardsFetchedElement;
+        new (): HTMLRtCardsFetchedElement;
+    };
+    interface HTMLRtFooterElement extends Components.RtFooter, HTMLStencilElement {
+    }
+    var HTMLRtFooterElement: {
+        prototype: HTMLRtFooterElement;
+        new (): HTMLRtFooterElement;
+    };
+    interface HTMLRtHeaderElement extends Components.RtHeader, HTMLStencilElement {
+    }
+    var HTMLRtHeaderElement: {
+        prototype: HTMLRtHeaderElement;
+        new (): HTMLRtHeaderElement;
+    };
+    interface HTMLRtSpinnerElement extends Components.RtSpinner, HTMLStencilElement {
+    }
+    var HTMLRtSpinnerElement: {
+        prototype: HTMLRtSpinnerElement;
+        new (): HTMLRtSpinnerElement;
+    };
+    interface HTMLRtUserFormElement extends Components.RtUserForm, HTMLStencilElement {
+    }
+    var HTMLRtUserFormElement: {
+        prototype: HTMLRtUserFormElement;
+        new (): HTMLRtUserFormElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "rt-card": HTMLRtCardElement;
+        "rt-cards-fetched": HTMLRtCardsFetchedElement;
+        "rt-footer": HTMLRtFooterElement;
+        "rt-header": HTMLRtHeaderElement;
+        "rt-spinner": HTMLRtSpinnerElement;
+        "rt-user-form": HTMLRtUserFormElement;
     }
 }
 declare namespace LocalJSX {
@@ -47,8 +108,33 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface RtCard {
+        "email"?: string;
+        "names"?: string;
+        "surnames"?: string;
+        "uid"?: string;
+    }
+    interface RtCardsFetched {
+    }
+    interface RtFooter {
+    }
+    interface RtHeader {
+    }
+    interface RtSpinner {
+    }
+    interface RtUserForm {
+        "btnName"?: string;
+        "uid"?: string;
+        "view"?: boolean;
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "rt-card": RtCard;
+        "rt-cards-fetched": RtCardsFetched;
+        "rt-footer": RtFooter;
+        "rt-header": RtHeader;
+        "rt-spinner": RtSpinner;
+        "rt-user-form": RtUserForm;
     }
 }
 export { LocalJSX as JSX };
@@ -56,6 +142,12 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "rt-card": LocalJSX.RtCard & JSXBase.HTMLAttributes<HTMLRtCardElement>;
+            "rt-cards-fetched": LocalJSX.RtCardsFetched & JSXBase.HTMLAttributes<HTMLRtCardsFetchedElement>;
+            "rt-footer": LocalJSX.RtFooter & JSXBase.HTMLAttributes<HTMLRtFooterElement>;
+            "rt-header": LocalJSX.RtHeader & JSXBase.HTMLAttributes<HTMLRtHeaderElement>;
+            "rt-spinner": LocalJSX.RtSpinner & JSXBase.HTMLAttributes<HTMLRtSpinnerElement>;
+            "rt-user-form": LocalJSX.RtUserForm & JSXBase.HTMLAttributes<HTMLRtUserFormElement>;
         }
     }
 }
