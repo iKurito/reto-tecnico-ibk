@@ -11,7 +11,9 @@ const getUsers = async (req = request, res = response) => {
     ]);
     return res.status(200).json({ total, users });
   } catch (error) {
-    return res.status(500).json({ message: "Error al obtener usuarios" });
+    return res
+      .status(500)
+      .json({ statusCode: 500, message: "Error al obtener usuarios" });
   }
 };
 
@@ -21,7 +23,9 @@ const getUserById = async (req = request, res = response) => {
     const user = await User.findById(id);
     return res.status(200).json(user);
   } catch (error) {
-    return res.status(500).json({ message: "Error al obtener usuario" });
+    return res
+      .status(500)
+      .json({ statusCode: 500, message: "Error al obtener usuario" });
   }
 };
 
@@ -41,7 +45,9 @@ const createUser = async (req = request, res = response) => {
     await user.save();
     return res.status(201).json(user);
   } catch (error) {
-    return res.status(500).json({ message: "Error al crear usuario" });
+    return res
+      .status(500)
+      .json({ statusCode: 500, message: "Error al crear usuario" });
   }
 };
 
@@ -62,7 +68,9 @@ const updateUser = async (req = request, res = response) => {
     const user = await User.findById(id);
     return res.status(200).json(user);
   } catch (error) {
-    return res.status(500).json({ message: "Error al actualizar usuario" });
+    return res
+      .status(500)
+      .json({ statusCode: 500, message: "Error al actualizar usuario" });
   }
 };
 
@@ -72,7 +80,9 @@ const removeUser = async (req = request, res = response) => {
     await User.findByIdAndRemove(id);
     return res.sendStatus(204);
   } catch (error) {
-    return res.status(500).json({ message: "Error al remover usuario" });
+    return res
+      .status(500)
+      .json({ statusCode: 500, message: "Error al remover usuario" });
   }
 };
 
