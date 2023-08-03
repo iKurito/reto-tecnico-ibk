@@ -2,5 +2,5 @@ declare var $ENV: Env;
 
 interface Env {
   apiUrl: string;
-  showCommits: boolean;
+  showCommits: string;
 }

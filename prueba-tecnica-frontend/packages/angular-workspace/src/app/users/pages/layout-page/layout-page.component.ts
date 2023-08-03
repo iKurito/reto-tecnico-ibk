@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./layout-page.component.sass']
 })
 export class LayoutPageComponent implements OnInit {
-  public showCommits = environment.showCommits;
+  public showCommits = JSON.parse(environment.showCommits);
   
   constructor() { }
 

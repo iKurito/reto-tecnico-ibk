@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./commits-page.component.sass']
 })
 export class CommitsPageComponent implements OnInit {
-  public showCommits = environment.showCommits;
+  public showCommits = JSON.parse(environment.showCommits);
 
   constructor() { }
 
