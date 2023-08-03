@@ -7,6 +7,15 @@ services:
     restart: unless-stopped
     ports:
       - "27017:27017"
+  web:
+    build:
+      context: ./prueba-tecnica-frontend
+      dockerfile: Dockerfile
+    image: rtunque/prueba-tecnica:frontend-1.0.0
+    container_name: web
+    restart: unless-stopped
+    ports:
+      - "80:80"
   api:
     build:
       context: ./prueba-tecnica-backend
@@ -17,8 +26,8 @@ services:
       - MONGODB_URI=mongodb://db:27017/prueba-tecnica
       - PORT=8080
       - LIMIT=100
+    restart: unless-stopped
     ports:
       - "8080:8080"
     depends_on:
       - db
-    restart: unless-stopped
