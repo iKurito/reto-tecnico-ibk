@@ -1,8 +1,13 @@
 <rt-header>
-  <ul>
-    <li [routerLink]="['/users/list']">Prueba Técnica</li>
-    <li [routerLink]="['/users/list']">Inicio</li>
-  </ul>
+  <div class="header">
+    <ul>
+      <li [routerLink]="['/users/list']">Prueba Técnica</li>
+    </ul>
+    <ul>
+      <li [routerLink]="['/users/list']">Inicio</li>
+      <li [routerLink]="['/users/records']">Constancias</li>
+    </ul>
+  </div>
 </rt-header>
 <div class="container">
   <router-outlet></router-outlet>

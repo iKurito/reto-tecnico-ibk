@@ -1,20 +1,32 @@
 $color-primary: #3f51b5
 
-ul
+.header
   display: flex
-  list-style: none
   justify-content: space-between
   align-items: center
-  padding: 1rem
-  border-bottom: 1px solid #ccc
-  background: $color-primary
 
-  li
-    cursor: pointer
+  ul
+    display: flex
+    width: 100%
+    list-style: none
+    align-items: center
+    padding: 1rem
+    border-bottom: 1px solid #ccc
+    background: $color-primary
 
-    &:hover
-      color: #fff
-      opacity: 0.75
+    &:nth-child(2)
+      justify-content: flex-end
+      gap: 1rem
+
+    li
+      cursor: pointer
+
+      &:hover
+        color: #fff
+        opacity: 0.75
+
+    @media screen and (max-width: 600px)
+      font-size: 13px
 
 .container
   padding: 1rem
