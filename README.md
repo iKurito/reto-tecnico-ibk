@@ -76,7 +76,11 @@ Puedes acceder a la documentación en `http://localhost:8080/api/v1/docs`.
 
 ## Testing
 
-Para los mocks y para las pruebas de los diferentes servicios, se utilizan las librerías Jest y Supertest. Además, para evitar la conexión directa a MongoDB, se emplea mongodb-memory-server. Para ejecutar las pruebas, utiliza el siguiente comando:
+Para las pruebas unitarias y de integración, se utilizan las librerías Jest y Supertest. Además, para evitar la conexión directa a MongoDB, se emplea mongodb-memory-server para configurar una base de datos en memoria.
+
+Los mocks de datos se generan manualmente en los archivos de prueba, lo que permite tener control total sobre los datos de prueba y garantiza que las pruebas sean más predecibles y mantenibles.
+
+Para ejecutar las pruebas, utiliza el siguiente comando:
 
 ```
 yarn test
