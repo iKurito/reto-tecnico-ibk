@@ -23,12 +23,9 @@ export class RtCard {
   deleteUser(id: string) {
     fetch(`http://localhost:8080/api/v1/users/${id}`, {
       method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json',
-      },
     })
       .then(res => {
-        if (res.status !== 200) {
+        if (res.status !== 204) {
           throw new Error('Error');
         }
         this.updateRecords(RecordType.DELETE);

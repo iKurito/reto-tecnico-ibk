@@ -75,7 +75,7 @@ export class RtUserForm {
       },
     })
       .then(res => {
-        if (res.status !== 200) {
+        if (res.status !== 201) {
           throw new Error('Error');
         }
         return res.json();
