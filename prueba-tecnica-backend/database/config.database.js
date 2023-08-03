@@ -5,6 +5,12 @@ mongoose.Promise = Promise;
 
 let mongoServer;
 
+/**
+ * Obtiene la URI de la base de datos MongoDB en función del entorno de ejecución.
+ *
+ * @returns {String} - La URI de la base de datos MongoDB.
+ * @throws {Error} - Un error en caso de que falle al obtener la URI.
+ */
 const getUri = async () => {
   if (process.env.NODE_ENV === "test") {
     mongoServer = await MongoMemoryServer.create();
@@ -13,6 +19,12 @@ const getUri = async () => {
   return process.env.MONGODB_URI;
 };
 
+/**
+ * Establece la conexión con la base de datos MongoDB.
+ *
+ * @param {String} uri - La URI de la base de datos MongoDB a la que se conectará.
+ * @throws {Error} - Un error en caso de que falle al establecer la conexión con la base de datos.
+ */
 const dbConnection = async (uri) => {
   const moongooseOptions = {
     useUnifiedTopology: true,
@@ -27,6 +39,11 @@ const dbConnection = async (uri) => {
   }
 };
 
+/**
+ * Cierra la conexión con la base de datos MongoDB.
+ *
+ * @throws {Error} - Un error en caso de que falle al cerrar la conexión con la base de datos.
+ */
 const dbDisconnection = async () => {
   try {
     await mongoose.disconnect();

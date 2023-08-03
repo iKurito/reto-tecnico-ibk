@@ -1,5 +1,11 @@
 const { User } = require("../models");
 
+/**
+ * Verifica si ya existe un usuario con el correo electrónico proporcionado en la base de datos.
+ *
+ * @param {String} email - El correo electrónico del usuario a verificar.
+ * @throws {Error} - Un error en caso de que el correo electrónico ya esté registrado en la base de datos.
+ */
 const existUserByEmail = async (email = "") => {
   const user = await User.findOne({ email });
   if (user) {
@@ -7,6 +13,12 @@ const existUserByEmail = async (email = "") => {
   }
 };
 
+/**
+ * Verifica si existe un usuario con el ID proporcionado en la base de datos.
+ *
+ * @param {String} id - El ID del usuario a verificar.
+ * @throws {Error} - Un error en caso de que el ID no exista en la base de datos.
+ */
 const existUserById = async (id) => {
   const user = await User.findById(id);
   if (!user) {
