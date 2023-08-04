@@ -2,6 +2,24 @@
 
 <!-- ![User Management System Logo](logo.png) -->
 
+## Tabla de contenidos
+
+- [Descripción del Proyecto](#descripción-del-proyecto)
+- [Requisitos Mínimos](#requisitos-mínimos)
+- [Instalación y Configuración](#instalación-y-configuración)
+- [Microfrontend con Stencil y Angular](#microfrontend-con-stencil-y-angular)
+  - [Componentes Web con Stencil](#componentes-web-con-stencil)
+  - [Manejo de Estados](#manejo-de-estados)
+  - [Estilización con SASS](#estilización-con-sass)
+  - [Información del Commit y Fecha de Compilación](#información-del-commit-y-fecha-de-compilación)
+- [Documentación de la API Rest](#documentación-de-la-api-rest)
+- [Testing a la API Rest](#testing-a-la-api-rest)
+- [Despliegue en Contenedor Docker](#despliegue-en-contenedor-docker)
+- [Cliente del Microfrontend (Sandbox)](#cliente-del-microfrontend-sandbox)
+- [Contribución](#contribución)
+- [Licencia](#licencia)
+- [Contacto y Soporte](#contacto-y-soporte)
+
 ## Descripción del Proyecto
 
 El **User Management System** es un sistema CRUD para el mantenimiento de usuarios. Permite realizar operaciones básicas de crear, leer, actualizar y eliminar usuarios, y genera una constancia después de cada operación realizada. La constancia incluye la información de la operación y cuenta con un botón de descarga para guardarla como imagen.
@@ -150,7 +168,7 @@ La API Rest para el mantenimiento de usuarios se encuentra documentada en el arc
 
 Puedes acceder a la documentación en `http://localhost:8080/api/v1/docs`.
 
-## Testing
+## Testing a la API Rest
 
 Para las pruebas unitarias y de integración, se utilizan las librerías Jest y Supertest. Además, para evitar la conexión directa a MongoDB, se emplea mongodb-memory-server para configurar una base de datos en memoria.
 
